@@ -18,12 +18,16 @@ def half_pyramid
   end
 end
 
-half_pyramid
+def perform
+  half_pyramid
+end
+
+perform
 
 #Implémentation de la méthode full_pyramid
 
 def full_pyramid
-  puts "Salut, bienvenue dans ma super pyramide complet !"
+  puts "Salut, bienvenue dans ma super pyramide complète !"
   puts "Combien d'étages veux-tu ? (entre 1 et 25)"
   print "> "
   nombre = gets.chomp.to_i
@@ -40,7 +44,11 @@ def full_pyramid
   end
 end
 
-full_pyramid
+def perform
+  full_pyramid
+end
+
+perform
 
 
 #Implémentation de la méthode wtf_pyramid pour concevoir une pyramide sous forme de losange
@@ -72,4 +80,8 @@ def wtf_pyramid
   end
 end
 
-wtf_pyramid
+def perform
+  wtf_pyramid
+end
+
+perform
