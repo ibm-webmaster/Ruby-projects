@@ -20,6 +20,8 @@ end
 
 half_pyramid
 
+#Implémentation de la méthode full_pyramid
+
 def full_pyramid
   puts "Salut, bienvenue dans ma super pyramide complet !"
   puts "Combien d'étages veux-tu ? (entre 1 et 25)"
@@ -39,3 +41,35 @@ def full_pyramid
 end
 
 full_pyramid
+
+
+#Implémentation de la méthode wtf_pyramid pour concevoir une pyramide sous forme de losange
+
+def wtf_pyramid
+  puts "Salut, bienvenue dans ma super pyramide !"
+  puts "Combien d'étages veux-tu ? (choisis un nombre impair)"
+  print "> "
+  etages = gets.chomp.to_i
+
+  if etages.even?
+    puts "Erreur : tu dois entrer un nombre impair !"
+  else
+    puts "Voici la wtf-pyramid :"
+
+    # Partie montante
+    1.upto((etages / 2) + 1) do |i|
+      espaces = " " * ((etages / 2) + 1 - i)
+      diese   = "#" * (2 * i - 1)
+      puts espaces + diese
+    end
+
+    # Partie descendante
+    (etages / 2).downto(1) do |i|
+      espaces = " " * ((etages / 2) + 1 - i)
+      diese   = "#" * (2 * i - 1)
+      puts espaces + diese
+    end
+  end
+end
+
+wtf_pyramid
